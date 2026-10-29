@@ -1,0 +1,3 @@
+1234;Cafe Americano;1.5;12
+2589;Galletas;0.35;20
+0001;Colada Morada;2.5;50
