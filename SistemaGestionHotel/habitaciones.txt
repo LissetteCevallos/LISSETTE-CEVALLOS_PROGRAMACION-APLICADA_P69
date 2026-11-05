@@ -1,0 +1,2 @@
+102;Suite;23.5;true
+101;Individual;25.0;false
