@@ -21,7 +21,7 @@ public class Aportador {
     public String getCorreo() { return correo; }
     public String getMontoTexto() { return montoTexto; }
 
-    // Convierte el texto del monto a número; si no se puede, devuelve 0
+    
     public double getMonto() {
         if (montoTexto == null) return 0;
         try {
@@ -47,7 +47,6 @@ public class Aportador {
         return isCedulaValida() && isCorreoValido() && isMontoValido();
     }
 
-    // Devuelve los campos incorrectos, por ejemplo: "cédula, correo"
     public String getErrores() {
         StringBuilder sb = new StringBuilder();
         if (!isCedulaValida()) sb.append("cédula ");
