@@ -13,15 +13,15 @@ import java.util.regex.Pattern;
 
 public class LectorRegistro {
 
-    // "cédula 123...", "cédula es 123..." o "CI 123..."
+   
     private static final Pattern P_CEDULA =
             Pattern.compile("\\b(?:[Cc][eé]dula(?:\\s+es)?|CI)\\s+(\\d+)");
 
-    // palabra que sigue a "correo" (ignora la frase "correo de ...")
+    
     private static final Pattern P_CORREO =
             Pattern.compile("\\bcorreo\\s+(?!de\\s)(\\S+)");
 
-    // $150.00  |  200 dólares  |  50.00 $  |  75.50 USD
+   
     private static final Pattern P_MONTO = Pattern.compile(
             "\\$\\s*(\\d+(?:[.,]\\d+)?)|(\\d+(?:[.,]\\d+)?)\\s*(?:\\$|[Dd][oó]lares|USD)");
 
@@ -41,7 +41,7 @@ public class LectorRegistro {
             }
         }
 
-        // 2. Separar en registros: un punto seguido de espacio y una mayúscula
+        // 2. Separar en registros
         String[] registros = sb.toString().split("(?<=\\.)\\s+(?=\\p{Lu})");
 
         // 3. Extraer los datos de cada registro
